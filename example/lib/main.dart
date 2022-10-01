@@ -31,7 +31,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 
   @override
   void initState() {
-    controller = ShrinkingViewController(tickerProvider: this); // <-- Initialize it with a TickerProvider
+    controller = ShrinkingViewController(
+        tickerProvider: this,
+        expandingAnimationDuration: const Duration(milliseconds: 500),
+        shrinkingAnimationDuration: const Duration(milliseconds: 850)); // <-- Initialize it with a TickerProvider
     super.initState();
   }
 
@@ -39,7 +42,15 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   Widget build(BuildContext context) {
     return ShrinkingView(
       // <--- Wrap your widget (usually a Scaffold) with the ShrinkingView.
+      borderRadiusValue: 65,
+      scaleMultiplier: 0.05,
+      // shrinkingAnimationCurve: Curves.bounceOut,
+      expandingAnimationCurve: Curves.bounceOut,
+      // topRightSquared: true,
+      // topLeftSquared: true,
+      verticalTranslateMultiplier: .1,
       controller: controller, // <--- Pass it the controller.
+      backgroundColorWhileAnimating: Colors.black,
       child: Scaffold(
         appBar: AppBar(
           title: const Text("shrinking_view example"),
