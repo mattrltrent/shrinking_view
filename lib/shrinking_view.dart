@@ -21,9 +21,13 @@ class ShrinkingViewController extends ChangeNotifier {
   late Duration? expandingAnimationDuration;
 
   ShrinkingViewController(
-      {required this.tickerProvider, Duration? shrinkingAnimationDuration, Duration? expandingAnimationDuration}) {
-    shrinkingAnimationDuration = shrinkingAnimationDuration ?? const Duration(milliseconds: 175);
-    expandingAnimationDuration = expandingAnimationDuration ?? const Duration(milliseconds: 175);
+      {required this.tickerProvider,
+      Duration? shrinkingAnimationDuration,
+      Duration? expandingAnimationDuration}) {
+    shrinkingAnimationDuration =
+        shrinkingAnimationDuration ?? const Duration(milliseconds: 175);
+    expandingAnimationDuration =
+        expandingAnimationDuration ?? const Duration(milliseconds: 175);
     _animController = AnimationController(
       vsync: tickerProvider,
       duration: shrinkingAnimationDuration,
@@ -156,7 +160,8 @@ class ShrinkingView extends StatefulWidget {
   State<ShrinkingView> createState() => _ShrinkingViewState();
 }
 
-class _ShrinkingViewState extends State<ShrinkingView> with SingleTickerProviderStateMixin {
+class _ShrinkingViewState extends State<ShrinkingView>
+    with SingleTickerProviderStateMixin {
   late Animation _anim;
 
   @override
@@ -188,7 +193,11 @@ class _ShrinkingViewState extends State<ShrinkingView> with SingleTickerProvider
       child: Transform.scale(
         scale: -_anim.value * widget.scaleMultiplier + 1,
         child: Transform.translate(
-          offset: Offset(0, _anim.value * MediaQuery.of(context).size.height * widget.verticalTranslateMultiplier),
+          offset: Offset(
+              0,
+              _anim.value *
+                  MediaQuery.of(context).size.height *
+                  widget.verticalTranslateMultiplier),
           child: SafeArea(
             top: widget.safeAreaTop,
             bottom: widget.safeAreaBottom,
@@ -197,10 +206,18 @@ class _ShrinkingViewState extends State<ShrinkingView> with SingleTickerProvider
             maintainBottomViewPadding: widget.maintainBottomViewPadding,
             child: ClipRRect(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(widget.topLeftSquared ? 0 : _anim.value * widget.borderRadiusValue),
-                topRight: Radius.circular(widget.topRightSquared ? 0 : _anim.value * widget.borderRadiusValue),
-                bottomLeft: Radius.circular(widget.bottomLeftSquared ? 0 : _anim.value * widget.borderRadiusValue),
-                bottomRight: Radius.circular(widget.bottomRightSquared ? 0 : _anim.value * widget.borderRadiusValue),
+                topLeft: Radius.circular(widget.topLeftSquared
+                    ? 0
+                    : _anim.value * widget.borderRadiusValue),
+                topRight: Radius.circular(widget.topRightSquared
+                    ? 0
+                    : _anim.value * widget.borderRadiusValue),
+                bottomLeft: Radius.circular(widget.bottomLeftSquared
+                    ? 0
+                    : _anim.value * widget.borderRadiusValue),
+                bottomRight: Radius.circular(widget.bottomRightSquared
+                    ? 0
+                    : _anim.value * widget.borderRadiusValue),
               ),
               child: widget.child,
             ),

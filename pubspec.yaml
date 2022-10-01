@@ -1,6 +1,6 @@
 name: shrinking_view
 description: A package allowing you to shrink views on command, usually scaffolds.
-version: 1.0.0
+version: 1.0.4
 homepage: https://matthewtrent.me/
 repository: https://github.com/mattrltrent/shrinking_view
 issue_tracker: https://github.com/mattrltrent/shrinking_view/issues

@@ -26,15 +26,18 @@ class HomePage extends StatefulWidget {
 }
 
 // Ensure you use either SingleTickerProviderStateMixin or TickerProviderStateMixin.
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
-  late ShrinkingViewController controller; // <--- Create a ShrinkingViewController.
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
+  late ShrinkingViewController
+      controller; // <--- Create a ShrinkingViewController.
 
   @override
   void initState() {
     controller = ShrinkingViewController(
         tickerProvider: this,
         expandingAnimationDuration: const Duration(milliseconds: 500),
-        shrinkingAnimationDuration: const Duration(milliseconds: 850)); // <-- Initialize it with a TickerProvider
+        shrinkingAnimationDuration: const Duration(
+            milliseconds: 850)); // <-- Initialize it with a TickerProvider
     super.initState();
   }
 
@@ -61,31 +64,38 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
-                onPressed: () => controller.expand(), // <--- Expand the ShrinkingView
+                onPressed: () =>
+                    controller.expand(), // <--- Expand the ShrinkingView
                 child: const Text("Expand (action)"),
               ),
               TextButton(
-                onPressed: () => controller.shrink(), // <--- Shrink the ShrinkingView
+                onPressed: () =>
+                    controller.shrink(), // <--- Shrink the ShrinkingView
                 child: const Text("Shrink (action)"),
               ),
               TextButton(
-                onPressed: () => print(controller.isShrunk()), // <--- Is it shrunk?
+                onPressed: () =>
+                    print(controller.isShrunk()), // <--- Is it shrunk?
                 child: const Text("Is shrunk? (bool)"),
               ),
               TextButton(
-                onPressed: () => print(controller.isExpanded()), // <--- Is it expanded?
+                onPressed: () =>
+                    print(controller.isExpanded()), // <--- Is it expanded?
                 child: const Text("Is expanded? (bool)"),
               ),
               TextButton(
-                onPressed: () => print(controller.isAnimating()), // <--- Is it animating?
+                onPressed: () =>
+                    print(controller.isAnimating()), // <--- Is it animating?
                 child: const Text("Is animating? (bool)"),
               ),
               TextButton(
-                onPressed: () => print(controller.isShrinkingCurrently()), // <--- Is it currently shrinking?
+                onPressed: () => print(controller
+                    .isShrinkingCurrently()), // <--- Is it currently shrinking?
                 child: const Text("Is currently shrinking? (bool)"),
               ),
               TextButton(
-                onPressed: () => print(controller.isExpandingCurrently()), // <--- Is it currently expanding?
+                onPressed: () => print(controller
+                    .isExpandingCurrently()), // <--- Is it currently expanding?
                 child: const Text("Is currently expanding? (bool)"),
               ),
             ],

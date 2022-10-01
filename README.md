@@ -14,10 +14,10 @@ _Similar to how iOS shrinks pages behind content in the foreground. Mainly inten
 
 ## Gif Demos 📸
 
-<img src="/resources/demo1.gif" width="" height="" />
-<img src="/resources/demo4.gif" width="" height="" />
-<img src="/resources/demo3.gif" width="" height="" />
-<img src="/resources/demo2.gif" width="" height="" />
+<img src="https://github.com/mattrltrent/shrinking_view/blob/main/resources/demo1.gif?raw=true" width="200" height="" style="display: inline"/>
+<img src="https://github.com/mattrltrent/shrinking_view/blob/main/resources/demo2.gif?raw=true" width="200" height="" style="display: inline"/>
+<img src="https://github.com/mattrltrent/shrinking_view/blob/main/resources/demo4.gif?raw=true" width="200" height="" style="display: inline"/>
+<img src="https://github.com/mattrltrent/shrinking_view/blob/main/resources/demo3.gif?raw=true" width="200" height="" style="display: inline"/>
 
 ## Getting Started 📜
 
@@ -50,6 +50,7 @@ _Similar to how iOS shrinks pages behind content in the foreground. Mainly inten
 
 3.  Wrap your `Scaffold` (or any widget, but `Scaffold` is recommended) inside the `ShrinkingView`, passing in the `controller` you just created.
     <br>
+
     ```dart
     return ShrinkingView(
       controller: controller,
@@ -58,7 +59,9 @@ _Similar to how iOS shrinks pages behind content in the foreground. Mainly inten
       ),
     );
     ```
+
     <br>
+
 4.  You're done! You can now call `controller.<SOME_METHOD>` to control your `ShrinkingView`! 🎉
 
 ## `ShrinkingViewController` Methods 🛠️
