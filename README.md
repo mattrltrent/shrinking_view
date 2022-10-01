@@ -1,4 +1,4 @@
-# A simple, lightweight, and fully customizable widget designed to shrink and expand a view/screen/widget programatically. ✨
+# A simple, lightweight, and fully customizable widget designed to shrink and expand a view/screen/widget programmatically. ✨
 
 _Similar to how iOS shrinks pages behind content in the foreground. Mainly intended to wrap Scaffold widgets._
 

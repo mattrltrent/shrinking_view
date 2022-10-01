@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Added more to documentation.
+
 ## 1.0.4
 
 - Fixed some formatting issues with the code in order to improve the pub score.
