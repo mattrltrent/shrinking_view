@@ -1,3 +1,7 @@
+## 1.0.6
+
+- Adds package analytics to `README.md`.
+
 ## 1.0.5
 
 - Added more to documentation.

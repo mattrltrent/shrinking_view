@@ -211,3 +211,5 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
 ## Additional information 📣
 
 The package is always open to improvements and suggestions! Hope you enjoy :)
+
+![analytics](https://hidden-coast-90561-45544df95b1b.herokuapp.com/api/v1/analytics/?kind=package-shrinking-view)
